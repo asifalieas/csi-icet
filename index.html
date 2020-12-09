@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSI | GECT - Home</title>
     <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
       rel="stylesheet"
       href="assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
     />
@@ -28,13 +36,12 @@
     <header class="container mynav">
       <nav
         id="myNavbar"
-        class="navbar navbar-custom navbar-expand-lg navbar-light"
-        style="padding: 0px"
+        class="navbar navbar-custom navbar-expand-lg navbar-light p-0"
       >
         <a class="navbar-brand" href="/index.html"
           ><img
             src="/assets/images/CSI SB GECT logo.png"
-            style="width: 70px; height: 70px"
+            alt="CSI SB GECT logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -45,15 +52,15 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="" role="button"
-            ><i class="fa fa-bars" aria-hidden="true" style="color: #19377e"></i
+          <span role="button"
+            ><i class="fa fa-bars" aria-hidden="true"></i
           ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="/index.html">Home</a>
-            <a class="nav-item nav-link" href="/about.html">About</a>
-            <a class="nav-item nav-link" href="#">Merits</a>
+            <a class="nav-item nav-link" href="#about">About</a>
+            <a class="nav-item nav-link" href="#merits">Merits</a>
             <a class="nav-item nav-link" href="#gallery">Gallery</a>
             <a
               class="nav-item nav-link"
@@ -67,32 +74,10 @@
       </nav>
     </header>
     <section class="content1">
-      <!--!alert-->
-      <div
-        class="alert alert-success alert-dismissible fade show text-center"
-        role="alert"
-      >
-        <p>
-          Success! We will get in touch with you soon
-          <i class="far fa-check-square"></i>
-        </p>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="alert"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
       <div class="row mainHeader">
         <div class="col-lg-5 offset-1" style="margin-top: 100px">
-          <h1 style="color: #2e2e2e; font-weight: bold; font-size: 64px">
-            Computer Society of India SB GECT
-          </h1>
-          <h3 style="color: #3a3a3a; font-size: 32px">
-            Where talent meets opportunity
-          </h3>
+          <h1>Computer Society of India SB GECT</h1>
+          <h3>Where talent meets opportunity</h3>
           <hr />
           <button type="button" class="btn btn-lg btn-outline-primary explore">
             Explore <i class="fas fa-search"></i>
@@ -111,7 +96,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="title">Be one of us</h5>
+            <h5 class="modal-title" id="title">Be a part of CSI SB GECT</h5>
             <button
               type="button"
               class="close"
@@ -124,7 +109,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form class="registerForm">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input
@@ -162,7 +147,7 @@
                 />
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary registerBtn">
+                <button type="submit" class="btn btn-outline-primary mainBtn">
                   Submit
                 </button>
               </div>
@@ -171,7 +156,91 @@
         </div>
       </div>
     </div>
-    <section style="margin-top: 150px; margin-bottom: 75px" class="container">
+    <div
+      class="modal fade"
+      id="contact"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="title">Contact form</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true"
+                ><i class="fas fa-window-close"></i
+              ></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="registerForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="collegeName">College</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="collegeName"
+                  placeholder="Enter your college name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="branchName">Branch</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="branchName"
+                  placeholder="Enter your branch name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="emailId">Email</label>
+                <input
+                  type="mail"
+                  class="form-control"
+                  if="emailId"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comment">Comments</label>
+                <textarea
+                  class="form-control"
+                  name="comment"
+                  id="comment"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-primary mainBtn">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section
+      style="margin-top: 150px; margin-bottom: 75px"
+      class="container"
+      id="about"
+    >
       <h1 style="font-weight: bolder; margin-bottom: 100px; color: #2e2e2e">
         Who we are
         <i style="color: #19377e" class="fas fa-users"></i>
@@ -199,7 +268,11 @@
             great pack of mentors so far.
           </p>
         </div>
-        <img src="/assets/images/logo.jpg" class="col-lg-4 offset-2" />
+        <img
+          src="/assets/images/logo.jpg"
+          class="col-lg-4 offset-2"
+          alt="CSI Logo"
+        />
       </div>
     </section>
     <section style="margin-top: 150px; margin-bottom: 75px" class="container">
@@ -212,6 +285,7 @@
           <img
             class="card-img-top"
             src="/assets/images/rep1.jpg"
+            alt="representative"
             style="width: 330px; height: 200px"
           />
           <div class="card-body">
@@ -249,7 +323,7 @@
           <img
             class="card-img-top"
             src="/assets/images/rep2.jpg"
-            alt="traveller bucketlist"
+            alt="representative"
             style="width: 330px; height: 200px"
           />
           <div class="card-body">
@@ -287,7 +361,7 @@
           <img
             class="card-img-top"
             src="/assets/images/rep3.jpg"
-            alt="entrepreneur bucketlist"
+            alt="representative"
             style="width: 330px; height: 200px"
           />
           <div class="card-body">
@@ -323,7 +397,7 @@
       </div>
     </section>
     <hr />
-    <section style="margin-top: 75px" class="container">
+    <section style="margin-top: 75px" class="container" id="merits">
       <h1 style="font-weight: bolder; margin-bottom: 100px; color: #2e2e2e">
         Why you should join us
         <i style="color: #19377e" class="far fa-handshake"></i>
@@ -453,28 +527,39 @@
         </div>
       </div>
     </section>
-    <section
-      class="newsLetter container text-center"
-      style="margin-top: 100px; max-width: 500px"
-    >
-      <form>
-        <div class="form-group">
-          <label for="newsletter"
-            ><h3 style="font-weight: bolder; color: #2e2e2e">
-              Subscribe to our newsletter
-            </h3></label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="newsletter"
-            placeholder="Enter email"
-          />
-        </div>
 
-        <button type="submit" class="btn btn-outline-primary">Subscribe</button>
-      </form>
+    <section class="newsLetter container" style="margin-top: 100px">
+      <div class="row">
+        <div class="col-lg-6">
+          <form>
+            <div class="form-group">
+              <label for="newsletter"
+                ><h3
+                  style="font-weight: bolder; color: #2e2e2e; font-size: 32px"
+                >
+                  Subscribe to our newsletter
+                </h3></label
+              >
+              <p style="line-height: 25px; font-size: 16px; color: #3a3a3a">
+                We will give you updates on various events, awards etc.
+              </p>
+              <input
+                type="email"
+                class="form-control"
+                id="newsletter"
+                placeholder="Enter email"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary subscribe">
+              Subscribe
+            </button>
+          </form>
+        </div>
+        <img src="/assets/images/updates.png" style="height: 300px" />
+      </div>
     </section>
+
     <!--!privacy policy and t&c-->
     <footer style="margin-top: 100px; background-color: #3a3a3a">
       <div
@@ -485,16 +570,25 @@
           <a href="#about" style="color: inherit; font-size: 32px">About</a>
         </div>
         <div>
-          <a href="#contact" style="color: inherit; font-size: 32px">Contact</a>
+          <a
+            href="#contact"
+            data-toggle="modal"
+            data-target="#contact"
+            href="#"
+            style="color: inherit; font-size: 32px"
+            >Contact</a
+          >
         </div>
         <div>
           <a
             href="https://www.facebook.com/"
             style="color: inherit; font-size: 32px"
+            class="mr-3"
             ><i class="fab fa-facebook-square"></i></a
           ><a
             href="https://www.instagram.com"
             style="color: inherit; font-size: 32px"
+            class="mr-3"
             ><i class="fab fa-instagram-square"></i></a
           ><a
             href="https://www.linkedin.com"
@@ -503,7 +597,7 @@
           ></a>
         </div>
       </div>
-      <p class="text-center mt-3" style="margin-bottom: 0; color: white">
+      <p class="text-center mt-4" style="margin-bottom: 0; color: white">
         <i class="far fa-copyright"></i>2020 CSI SB GECT. All rights reserved.
       </p>
     </footer>
@@ -528,7 +622,7 @@
       $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
           loop: true,
-          autoplay: 2000,
+          autoplay: 1500,
           autoplayHoverPause: true,
           margin: 10,
           responsiveClass: true,

@@ -9,6 +9,15 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+#myNavbar a  img{
+    width: 70px;
+    height: 70px;
+}
+
+#myNavbar button span i{
+    color:  #19377e;
+} 
+
 .content1 .mainHeader{
     width: 100vw;
     height: 100vh;
@@ -18,11 +27,31 @@ body{
     background-repeat: no-repeat;
 }
 
-.content1 .mainHeader .explore{
+.content1 .mainHeader h1{
+    color: #2e2e2e;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.content1 .mainHeader h3{
+    color: #3a3a3a;
+    font-size: 32px;
+}
+
+.mainBtn{
     color:  #2e2e2e;
 }
 
-.content1 .mainHeader .explore:hover{
+.mainBtn:hover{
+    color: #fff;
+    background-color: #19377e;
+}
+
+.content1 .mainHeader .explore, .newsLetter .row form .subscribe{
+    color:  #2e2e2e;
+}
+
+.content1 .mainHeader .explore:hover, .newsLetter .row form .subscribe:hover{
     color: #fff;
     background-color: #19377e;
 } 
